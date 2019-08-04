@@ -3,12 +3,12 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const PostSchema = new Schema({
-    name: {
+    url: {
         type: String,
         trim: true,
-        required: true
+        required: false
     },
-    url: {
+    postType: {
         type: String,
         trim: true,
         required: true
