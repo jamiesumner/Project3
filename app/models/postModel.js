@@ -38,6 +38,11 @@ const PostSchema = new Schema({
         trim: true,
         required: false
     },
+    sponsored: {
+        type: String,
+        trim: true,
+        required: true
+    },
     brand: {
         type: String,
         trim: true,
