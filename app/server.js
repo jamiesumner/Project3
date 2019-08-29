@@ -16,10 +16,14 @@ if (process.env.NODE_ENV === "production") {
 }
 
 // Connect to MongoDB
-// Won't run in Heroku bc it has localhost; NEED TO CHANGE
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/grmmr";
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost:27017/grmmr";
 
-mongoose.connect(MONGODB_URI);
+mongoose.connect(MONGODB_URI,
+  {
+    useNewUrlParser: true,
+    user: process.env.DB_USER,
+    pass: process.env.DB_PASSWORD
+  });
 
 // Define API routes here
 app.use(postRoutes);
