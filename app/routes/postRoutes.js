@@ -1,7 +1,11 @@
 const router = require("express").Router();
 const db = require("../models")
 
-// gets all the posts that have been entered
+router.get("/", function (req, res) {
+    res.json(path.join(__dirname, "public/index.html"));
+});
+
+
 router.get("/api/post", (req, res) => {
     db.Post.find({}).then(function (dbPost) {
         res.json(dbPost);

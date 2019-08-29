@@ -5,9 +5,9 @@ function Dashboard() {
     return (
         <div className="container mt-5">
             <div className="row">
-                <h3 className="text-align-center text-dark font-weight-bold">Dashboard</h3><br></br>
+                <h3 className="text-align-center text-dark font-weight-bold">Dashboard</h3>
             </div>
-            <div className="row">
+            <div className="row mt-5">
                 <div class="col-lg-3 col-sm-6">
                     <div className="card">
                         <div className="card-body">

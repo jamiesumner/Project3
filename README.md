@@ -1,1 +1,1 @@
-# Project3
+GRMMR is an app for influencers to keep track of their Instagram posts and growth.

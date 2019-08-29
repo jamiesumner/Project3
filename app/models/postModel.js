@@ -8,30 +8,15 @@ const PostSchema = new Schema({
         trim: true,
         required: false
     },
-    photoUrl: {
+    postType: {
         type: String,
         trim: true,
         required: false
     },
-    postType: {
-        type: String,
-        trim: true,
-        required: true
-    },
     date: {
-        type: Date,
-        trim: true,
-        required: true
-    },
-    description: {
         type: String,
         trim: true,
-        required: true
-    },
-    caption: {
-        type: String,
-        trim: true,
-        required: true
+        required: false
     },
     hashtags: {
         type: String,
@@ -48,26 +33,11 @@ const PostSchema = new Schema({
         trim: true,
         required: false
     },
-    sponsored: {
-        type: String,
-        trim: true,
-        required: true
-    },
-    brand: {
-        type: String,
-        trim: true,
-        required: false
-    },
-    requirements: {
-        type: String,
-        trim: true,
-        required: false
-    },
     compensation: {
-        type: Number,
+        type: String,
         trim: true,
         required: false
-    },
+    }
 });
 
 const Post = mongoose.model("Post", PostSchema);
