@@ -1,0 +1,34 @@
+.fa, .fab, .fas {
+    color: white;
+    opacity: 0.5;
+}
+
+.card-title {
+    font-size: 16px;
+}
+
+.card {
+    font-size: 14px;
+    text-align: center;
+}
+
+.container {
+    font-size: 14px;
+    text-align: center;
+    background-color: #f8f9fa;
+}
+
+.user {
+    text-align: right;
+}
+
+.wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+}
+
+.sidebar {
+    height: 100%;
+    background-color: white;
+}

@@ -17,10 +17,13 @@ if (process.env.NODE_ENV === "production") {
 
 // Connect to MongoDB
 // Won't run in Heroku bc it has localhost; NEED TO CHANGE
-mongoose.connect("mongodb://localhost/grammerdb", { useNewUrlParser: true });
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/grmmr";
+
+mongoose.connect(MONGODB_URI);
 
 // Define API routes here
 app.use(postRoutes);
+// app.use(userRoutes);
 
 app.listen(PORT, () => {
   console.log(`🌎 ==> API server now on port ${PORT}!`);

@@ -8,6 +8,11 @@ const PostSchema = new Schema({
         trim: true,
         required: false
     },
+    photoUrl: {
+        type: String,
+        trim: true,
+        required: false
+    },
     postType: {
         type: String,
         trim: true,
@@ -29,6 +34,11 @@ const PostSchema = new Schema({
         required: true
     },
     hashtags: {
+        type: String,
+        trim: true,
+        required: false
+    },
+    mentions: {
         type: String,
         trim: true,
         required: false

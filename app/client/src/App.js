@@ -1,18 +1,41 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
-import "./App.css";
+import axios from "axios";
+import Form from "./components/form/form";
+import Nav from "./components/nav/nav";
+import Col from "./components/column/col";
+import Row from "./components/row/row";
+import Dashboard from "./components/dashboard/dashboard";
+import Feed from "./components/feed/feed";
+import FollowerChart from "./components/charts/chart";
 
 class App extends Component {
+  state = {
+    posts: []
+  }
+
+  componentDidMount() {
+    axios.get("/api/post").then(results => {
+      console.log(results);
+      this.setState({
+        posts: results.data
+      })
+    });
+  }
+
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div>
+        <Row>
+          <Col size="md-2">
+            <Nav />
+          </Col>
+          <Col size="md-10">
+            <Dashboard />
+            <FollowerChart />
+            <Feed />
+            <Form />
+          </Col>
+        </Row>
       </div>
     );
   }
