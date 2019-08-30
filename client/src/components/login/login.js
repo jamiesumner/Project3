@@ -14,7 +14,7 @@ function Login() {
                                     <div className="form-group">
                                         <input type="email" className="form-control" placeholder="Email"></input>
                                     </div>
-                                    <button className="btn submit">Sign In</button>
+                                    <button className="btn submit"><a href="/dashboard" id="signin">Sign In</a></button>
                                 </form>
                             </div>
                         </div>

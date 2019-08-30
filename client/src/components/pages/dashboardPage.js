@@ -18,7 +18,6 @@ class DashboardPage extends Component {
                     <Col size="md-10">
                         <Dashboard />
                         <FollowerChart />
-                        <Feed />
                     </Col>
                 </Row>
             </div>
