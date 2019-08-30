@@ -1,15 +1,12 @@
 import React, { Component } from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import axios from "axios";
-import Form from "./components/form/form";
 import Nav from "./components/nav/nav";
 import Col from "./components/column/col";
 import Row from "./components/row/row";
-import Dashboard from "./components/dashboard/dashboard";
-import Feed from "./components/feed/feed";
-import FollowerChart from "./components/charts/chart";
-import PostDetails from "./components/postDetails/postDetails";
-import PostDetailsMain from "./components/postDetails/postDetailsMain";
-// import Login from "./components/login/login";
+import DashboardPage from "./components/pages/dashboardPage";
+import AddPostsPage from "./components/pages/addPostsPage";
+import PostsPage from "./components/pages/postsPage";
 
 class App extends Component {
   state = {
@@ -27,33 +24,22 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        {/* <Login /> */}
-        <Row>
-          <Col size="md-2">
-            <Nav />
-          </Col>
-          <div className="container">
-            <Col size="md-10">
-              <Dashboard />
-              <FollowerChart />
-              <Feed />
-              <Form />
-              <PostDetailsMain />
-              {this.state.posts.map(post => (
-                <PostDetails
-                  url={post.url}
-                  postType={post.postType}
-                  date={post.date}
-                  hashtags={post.hashtags}
-                  mentions={post.mention}
-                  preset={post.preset}
-                  compensation={post.compensation} />
-              ))}
+      <Router>
+        <div>
+          <Row>
+            <Col size="md-2">
+              <Nav />
             </Col>
-          </div>
-        </Row>
-      </div>
+            <Col size="md-10">
+              <Switch>
+                <Route exact path="/dashboard" component={DashboardPage} />
+                <Route exact path="/posts" component={PostsPage} />
+                <Route exact path="/addpost" component={AddPostsPage} />
+              </Switch>
+            </Col>
+          </Row>
+        </div>
+      </Router>
     );
   }
 }
