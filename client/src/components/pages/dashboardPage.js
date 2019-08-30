@@ -12,9 +12,14 @@ class DashboardPage extends Component {
         return (
             <div>
                 <Row>
-                    <Dashboard />
-                    <FollowerChart />
-                    <Feed />
+                    <Col size="md-2">
+                        <Nav />
+                    </Col>
+                    <Col size="md-10">
+                        <Dashboard />
+                        <FollowerChart />
+                        <Feed />
+                    </Col>
                 </Row>
             </div>
         );

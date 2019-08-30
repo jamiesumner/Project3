@@ -25,18 +25,23 @@ class PostsPage extends Component {
         return (
             <div>
                 <Row>
-                    <Feed />
-                    <PostDetailsMain />
-                    {this.state.posts.map(post => (
-                        <PostDetails
-                            url={post.url}
-                            postType={post.postType}
-                            date={post.date}
-                            hashtags={post.hashtags}
-                            mentions={post.mention}
-                            preset={post.preset}
-                            compensation={post.compensation} />
-                    ))}
+                    <Col size="md-2">
+                        <Nav />
+                    </Col>
+                    <Col size="md-10">
+                        <Feed />
+                        <PostDetailsMain />
+                        {this.state.posts.map(post => (
+                            <PostDetails
+                                url={post.url}
+                                postType={post.postType}
+                                date={post.date}
+                                hashtags={post.hashtags}
+                                mentions={post.mention}
+                                preset={post.preset}
+                                compensation={post.compensation} />
+                        ))}
+                    </Col>
                 </Row>
             </div>
         );

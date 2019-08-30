@@ -23,6 +23,9 @@ class AddPostsPage extends Component {
         return (
             <div>
                 <Row>
+                    <Col size="md-2">
+                        <Nav />
+                    </Col>
                     <Col size="md-10">
                         <Form />
                     </Col>

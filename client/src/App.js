@@ -7,6 +7,7 @@ import Row from "./components/row/row";
 import DashboardPage from "./components/pages/dashboardPage";
 import AddPostsPage from "./components/pages/addPostsPage";
 import PostsPage from "./components/pages/postsPage";
+import LoginPage from "./components/pages/loginPage";
 
 class App extends Component {
   state = {
@@ -27,11 +28,9 @@ class App extends Component {
       <Router>
         <div>
           <Row>
-            <Col size="md-2">
-              <Nav />
-            </Col>
-            <Col size="md-10">
+            <Col size="md-12">
               <Switch>
+                <Route exact path="/login" component={LoginPage} />
                 <Route exact path="/dashboard" component={DashboardPage} />
                 <Route exact path="/posts" component={PostsPage} />
                 <Route exact path="/addpost" component={AddPostsPage} />
