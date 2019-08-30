@@ -8,7 +8,8 @@ import Dashboard from "./components/dashboard/dashboard";
 import Feed from "./components/feed/feed";
 import FollowerChart from "./components/charts/chart";
 import PostDetails from "./components/postDetails/postDetails";
-import Login from "./components/login/login";
+import PostDetailsMain from "./components/postDetails/postDetailsMain";
+// import Login from "./components/login/login";
 
 class App extends Component {
   state = {
@@ -38,11 +39,17 @@ class App extends Component {
               <FollowerChart />
               <Feed />
               <Form />
-
+              <PostDetailsMain />
               {this.state.posts.map(post => (
-                <PostDetails url={post.url} />
+                <PostDetails
+                  url={post.url}
+                  postType={post.postType}
+                  date={post.date}
+                  hashtags={post.hashtags}
+                  mentions={post.mention}
+                  preset={post.preset}
+                  compensation={post.compensation} />
               ))}
-
             </Col>
           </div>
         </Row>

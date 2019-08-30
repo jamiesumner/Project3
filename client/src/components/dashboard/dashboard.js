@@ -8,7 +8,7 @@ function Dashboard() {
                 <h3 className="text-align-center text-dark font-weight-bold">Dashboard</h3>
             </div>
             <div className="row mt-5">
-                <div class="col-lg-3 col-sm-6">
+                <div className="col-lg-3 col-sm-6">
                     <div className="card">
                         <div className="card-body">
                             <h3 className="card-title text-white">Total Posts</h3>
@@ -20,7 +20,7 @@ function Dashboard() {
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-sm-6">
+                <div className="col-lg-3 col-sm-6">
                     <div className="card">
                         <div className="card-body">
                             <h3 className="card-title text-white">Compensation</h3>
@@ -32,7 +32,7 @@ function Dashboard() {
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-sm-6">
+                <div className="col-lg-3 col-sm-6">
                     <div className="card">
                         <div className="card-body">
                             <h3 className="card-title text-white">Follower Growth</h3>
@@ -44,7 +44,7 @@ function Dashboard() {
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-sm-6">
+                <div className="col-lg-3 col-sm-6">
                     <div className="card">
                         <div className="card-body">
                             <h3 className="card-title text-white">Engagement</h3>
