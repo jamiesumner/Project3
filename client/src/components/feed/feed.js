@@ -11,7 +11,7 @@ function Feed() {
                     </div>
                     <div className="row">
                         <InstagramEmbed
-                            url='https://www.instagram.com/p/B1uuJTUhuKl/'
+                            url='https://www.instagram.com/p/B2AZJz0hG0v/'
                             maxWidth={320}
                             hideCaption={false}
                             containerTagName='div'
@@ -23,7 +23,7 @@ function Feed() {
                             onFailure={() => { }}
                         />
                         <InstagramEmbed
-                            url='https://www.instagram.com/p/B1r_gvYB40O/'
+                            url='https://www.instagram.com/p/B1-AYwYhzGS/'
                             maxWidth={320}
                             hideCaption={false}
                             containerTagName='div'
@@ -35,7 +35,7 @@ function Feed() {
                             onFailure={() => { }}
                         />
                         <InstagramEmbed
-                            url='https://www.instagram.com/p/B1pXSE0hkfb/'
+                            url='https://www.instagram.com/p/B17Vj1Hh4rA/'
                             maxWidth={320}
                             hideCaption={false}
                             containerTagName='div'
