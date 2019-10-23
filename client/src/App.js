@@ -30,7 +30,7 @@ class App extends Component {
           <Row>
             <Col size="md-12">
               <Switch>
-                <Route exact path="/login" component={LoginPage} />
+                <Route exact path="/" component={LoginPage} />
                 <Route exact path="/dashboard" component={DashboardPage} />
                 <Route exact path="/posts" component={PostsPage} />
                 <Route exact path="/addpost" component={AddPostsPage} />
